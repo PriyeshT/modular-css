@@ -1,0 +1,103 @@
+@media screen and (max-width: 750px) {
+	
+	header {
+		text-align: left;
+	}
+	
+	header .site-logo,
+	header nav,
+	.main-nav,
+	.main-nav li {
+		float: none;
+	}
+	
+	header .site-logo {
+		padding: 15px;
+	}
+	
+	nav {
+		
+		.main-nav {
+			display: none;
+			
+			&.open {
+				display: block;
+				text-align: center;
+			}
+			
+			&__item {
+				line-height: 2.5;
+				border: 0;
+				
+				&:hover {
+					border-bottom: 0;
+					border-color: transparent;
+				}
+			}
+			
+			&__search {
+				// position: absolute;
+				// top: -105px;
+				// right: 45px;
+
+				// .search-wrap {
+				// 	&.expand {
+				// 		width: 250px;
+				// 	}
+				// }
+				display: none;
+				
+			}
+		}
+		
+		.hamburger-button {
+			width: 28px;
+			top: -55px;
+		}
+		
+		.hamburger-button span:nth-child(1) {
+			content: '';
+			top: -5px;
+		}
+		
+		.hamburger-button span:nth-child(3) {
+			content: '';
+			bottom: -10px;
+		}
+	}
+}
+
+
+@media screen and (min-width: 769px) {	
+	
+	.hamburger-button {
+		display: none;
+	}
+	
+	.floats-lesson {
+		
+		padding-top: 50px;
+		padding-bottom: 50px;
+		
+		margin: 20px auto;
+		img {
+			float: left;
+			margin-top: 5px; 
+			margin-right: 25px;
+			margin-bottom: 25px;
+		}
+		
+		p {
+			margin-top: 0;
+		}
+		
+	}
+	
+	.box {
+		width: 50%;
+		margin-right: -5px;
+		display: inline-block;
+		vertical-align: bottom;
+	}
+}
+

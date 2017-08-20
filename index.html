@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Poly UI Kit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="scss/application.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  </head>
+  <body>
+    
+    <header role="banner">
+      <div class="container clearfix">
+        <h1 class="site-logo">
+          <img src="img/logo.svg" alt="Logo">
+        </h1>
+        
+        
+        <nav class="clearfix">
+          <button class="hamburger-button" aria-label="Navigation Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="main-nav">
+            <li class="main-nav__item">
+              <a href="#">Home</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Tickets</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Match Day</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Table</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Gallery</a>
+            </li>
+            <li class="main-nav__search">
+              <form class="search-form" method="post">
+                <div class="search-wrap">
+                  <label for="search" class="srt">Search</label>
+                  <input type="text" class="search-input" placeholder="Search" name="search" id="search">
+                  <span class="search-trigger">
+                    <i class="fa fa-search"></i>
+                  </span>
+                  <button type="submit" class="srt">Search</button>
+                </div>
+              </form>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header> 
+    
+    <section class="container countdown">
+      <div class="clock">
+        <div class="cbox-1 clearfix">
+          <span class="cbox-1-digit">136</span>
+          <span class="cbox-1-txt">Days</span>
+        </div>
+        <div class="cbox-1 clearfix">
+          <span class="cbox-1-digit">14</span>
+          <span class="cbox-1-txt">Hours</span>
+        </div>
+        <div class="cbox-1 clearfix">
+          <span class="cbox-1-digit">48</span>
+          <span class="cbox-1-txt">Min</span>
+        </div>
+        <div class="cbox-1 clearfix">
+          <span class="cbox-1-digit">49</span>
+          <span class="cbox-1-txt">Sec</span>
+        </div>
+      </div>
+    </section>
+    
+      
+    <section class="main">
+      
+      <div class="container clearfix">
+        <div class="secondary col">
+          
+          <h2> Lorem ipsum.</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure a facere vitae maiores commodi. Sit corporis dolorum at. Neque temporibus aperiam consectetur natus blanditiis ex.
+          </p>
+          
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati voluptatem quaerat ea omnis a deleniti nam eveniet cumque cum minima. Pariatur omnis commodi veniam ab minima corporis eius doloremque incidunt nesciunt odit, soluta voluptatibus fugiat animi aliquid obcaecati facilis, ratione. Placeat suscipit corrupti sapiente dicta sit rerum optio quas rem.</p>
+        </div>
+        
+        <div class="primary col">
+          <h2>Lorem ipsum.</h2>
+          <figure>
+            <!-- <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-4x"></i>
+              <i class="fa fa-map-marker"></i>
+            </span> -->
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-map-marker fa-stack-1x fa-inverse"></i>
+            </span>
+            <img src="https://lorempixel.com/350/150/city" alt="random city">
+            <figcaption>
+              <h4>Random City</h4>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, enim.
+            </figcaption>
+          </figure>
+          
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi omnis, porro esse veniam perspiciatis tenetur facere totam illo labore fuga ut mollitia sapiente recusandae saepe reprehenderit! Incidunt fugiat temporibus, quas ipsam accusamus eaque ducimus totam explicabo aspernatur dicta, deleniti ad recusandae est, quis ullam nulla illum. Inventore praesentium quaerat ipsum!</p>
+          
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore omnis modi asperiores soluta autem nihil, quo itaque, unde atque, commodi tenetur delectus recusandae. Asperiores eligendi nemo debitis ratione explicabo numquam non dolores, ducimus nobis nostrum quas tempora sapiente, magnam, voluptas, reprehenderit odit! Dicta tempore fuga nam iste. Porro, iure, expedita.</p>
+          
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ipsam incidunt voluptas non dolor at quod repellat velit neque tempora beatae inventore mollitia corporis vel quaerat ab, porro delectus labore.</p>
+        </div>
+      </div>
+      
+    </section>
+    
+    <footer class="clearfix">
+      <img class="logo" src="img/logo.svg" alt="logo">
+      <ul class="footer-nav">
+        <li><a href="#">Ice cream</a></li>
+        <li><a href="#">Donuts</a></li>
+        <li><a href="#">Tea</a></li>
+        <li><a href="#">Coffee</a></li>
+      </ul>
+      <p class="copyright">&copy;2015 The Best City.</p>
+    </footer>
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js">  </script>  
+    <script type="text/javascript" src="https://masonry.desandro.com/masonry.pkgd.js"></script>
+    <script type="text/javascript">
+      
+    
+    $('.search-trigger').on('click', function(e) {
+      e.preventDefault();
+      $('.search-wrap').hasClass('expand') ? $('.search-wrap').removeClass('expand') : $('.search-wrap').addClass('expand');
+      
+      if($('.main-nav__item').hasClass('expand')) {
+        $('.main-nav__item').removeClass('expand');
+        // $('.main-nav__item').delay(500).fadeIn('slow');
+      } else {
+        $('.main-nav__item').addClass('expand');
+        // $('.main-nav__item').fadeOut('fast');
+      }
+      
+      if($('.fa').hasClass('fa-search')) {
+        $('.fa').removeClass('fa-search');
+        $('.fa').addClass('fa-times');
+      } else {
+        $('.fa').addClass('fa-search');
+        $('.fa').removeClass('fa-times');
+      }
+      
+      $('#search').delay(500).toggleClass('open');
+      
+      
+    });
+    
+    $(document).on('click', function(e){
+      if(!$(e.target).closest('.search-wrap').length) {
+        if($('.fa').hasClass('fa-times')) {
+          $('.fa').removeClass('fa-times');
+          $('.fa').addClass('fa-search');
+        } 
+        
+        if($('.main-nav__item').hasClass('expand')) {
+          $('.main-nav__item').removeClass('expand');
+          // $('.main-nav__item').delay(500).fadeIn('slow');
+        } 
+        
+        if($('.search-wrap').hasClass('expand')) {
+          $('.search-wrap').removeClass('expand');
+          // $('.main-nav__item').delay(500).fadeIn('slow');
+        } 
+        
+        $('#search').removeClass('open');
+      }
+    });
+    
+    
+    $('.grid').masonry({
+      itemSelector: '.grid-item',
+      columnWidth: 160,
+      horizontalOrder: true
+    });
+    
+    $('.hamburger-button').on('click', function(e) {
+        e.preventDefault();
+        $('.main-nav').toggleClass('open');
+    });
+    
+    
+    
+        </script>
+  </body>
+</html>
