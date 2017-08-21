@@ -35,13 +35,31 @@ h2 {
 }
 
 .container {
-	width: 100%;
-	max-width: 1150px;
-	margin: 0 auto;
 	position: relative;
-	// border: 1px solid black;
-	padding: 0 50px;
+	@include container-fixed;
+	@include clearfix;
+	
+	@media (min-width: $bp-tablet) {
+		@include container-fixed(30px);
+		width: $container-sm;
+	}
+	
+	@media (min-width: $bp-desktop) {
+		width: $container-md;
+	}
+	
+	@media (min-width: $bp-lg-desktop) {
+		width: $container-lg;
+	}
+	
+	
+	border: 1px solid red;
+	
 }
 
+.container-fluid {
+	@include container-fixed;
+	border: 1px solid blue;
+}
 
 

@@ -212,11 +212,48 @@ h2 {
   font-size: 1.7142857143em; }
 
 .container {
-  width: 100%;
-  max-width: 1150px;
-  margin: 0 auto;
   position: relative;
-  padding: 0 50px; }
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: 1px solid red; }
+  .container:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .container:after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media (min-width: 768px) {
+    .container {
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 15px;
+      padding-right: 15px;
+      width: 760px; }
+      .container:after {
+        content: "";
+        display: table;
+        clear: both; } }
+  @media (min-width: 1084px) {
+    .container {
+      width: 1080px; } }
+  @media (min-width: 1280px) {
+    .container {
+      width: 1280px; } }
+
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: 1px solid blue; }
+  .container-fluid:after {
+    content: "";
+    display: table;
+    clear: both; }
 
 html {
   margin: 0;
@@ -496,10 +533,19 @@ figure {
 
 .countdown {
   text-align: center;
-  padding: 15px; }
+  padding-top: 25px;
+  padding-bottom: 25px; }
+  .countdown h1 {
+    font-size: 5.1428571429em; }
+  .countdown h2 {
+    font-size: 4.2857142857em; }
 
 .clock {
-  display: inline-block; }
+  display: inline-block;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto; }
   .clock .cbox-1 {
     float: left;
     text-align: center;

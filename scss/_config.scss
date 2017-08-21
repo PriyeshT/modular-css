@@ -17,6 +17,33 @@ $font-weight--medium		: 400;
 $font-weight--bold			: 700;
 $font-weight--ultra-bold	: 900;
 
+// Breakpoints
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-desktop: 1084px;
+$bp-lg-desktop: 1280px;
+
+$containerWidth: $bp-desktop;
+
+// Grid
+$grid-gutter-width: 50px !default;
+
+// Container sizes
+
+$container-tablet: (710px + $grid-gutter-width) !default;
+$container-sm: $container-tablet !default;
+
+$container-desktop: (1030px + $grid-gutter-width) !default;
+$container-md: $container-desktop !default;
+
+$container-lg-desktop: (1230px + $grid-gutter-width) !default;
+$container-lg: $container-lg-desktop !default;
+
+// Default padding top and bottom
+$paddingTop: 60px;
+$paddingBottom: 60px;
+
+
 // Descriptive Base Colors
 
 $white		: #fff;

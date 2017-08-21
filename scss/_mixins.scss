@@ -1,0 +1,36 @@
+@mixin clearfix {
+	&:after {
+	    content: "";
+	    display: table;
+	    clear: both;
+	  }
+}
+
+//centered container element
+
+@mixin container-fixed($gutter: $grid-gutter-width) {
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: floor(($gutter / 2));
+	padding-right: ceil(($gutter / 2));
+	@include clearfix;
+}
+
+@mixin make-row($gutter: $grid-gutter-width) {
+	margin-left: ceil(($gutter / 2));
+	margin-right: floor(($gutter / 2));
+	@include clearfix;
+}
+
+// Center-align a block level element
+@mixin center-block() {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@mixin padding-vertical($top: $paddingTop, $bottom: $paddingBottom) {
+	padding-top: floor(($top / 2));
+	padding-bottom: ceil(($bottom / 2));
+}
+

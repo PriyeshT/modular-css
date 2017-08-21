@@ -63,11 +63,25 @@
 
 .countdown {
 	text-align: center;
-	padding: 15px;
+	padding-top: floor(($grid-gutter-width / 2 ));
+	padding-bottom: ceil(($grid-gutter-width / 2));
+	
+	h1 {
+		font-size: em(72px);
+	}
+	
+	h2 {
+		font-size: em(60px);
+	}
+	
 }
 
 .clock{
 	display: inline-block;
+	@include padding-vertical();
+	// border: 1px solid #ffc600;
+	margin-left: auto;
+	margin-right: auto;
 	
 	
 	.cbox-1 {
