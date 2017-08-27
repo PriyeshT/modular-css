@@ -38,20 +38,11 @@ h2 {
 	position: relative;
 	@include container-fixed;
 	@include clearfix;
+	max-width: $containerWidth;
 	
-	@media (min-width: $bp-tablet) {
-		@include container-fixed(30px);
-		width: $container-sm;
+	@media screen and (min-width: $bp-lg-desktop) {
+		max-width: $bp-lg-desktop;
 	}
-	
-	@media (min-width: $bp-desktop) {
-		width: $container-md;
-	}
-	
-	@media (min-width: $bp-lg-desktop) {
-		width: $container-lg;
-	}
-	
 	
 	border: 1px solid red;
 	
@@ -59,7 +50,7 @@ h2 {
 
 .container-fluid {
 	@include container-fixed;
+	width: 100%;
 	border: 1px solid blue;
 }
-
 
