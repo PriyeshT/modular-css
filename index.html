@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="scss/application.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css">
   </head>
   <body>
     
     <header role="banner">
-      <div class="container clearfix">
+      <div class="container-fluid">
         <h1 class="site-logo">
           <img src="img/logo.svg" alt="Logo">
         </h1>
@@ -54,24 +56,29 @@
       </div>
     </header> 
     
-    <section class="container countdown">
-      <div class="clock">
-        <div class="cbox-1 clearfix">
-          <span class="cbox-1-digit">136</span>
-          <span class="cbox-1-txt">Days</span>
+    <section class="container">
+      <div class="countdown" style="background-image: url('http://lorempixel.com/600/600/city')">
+        <div class="image-overlay"></div>
+        <h1>Lorem ipsum dolor.</h1>
+        <div class="clock">
+          <div class="cbox-1 clearfix">
+            <span class="cbox-1-digit">136</span>
+            <span class="cbox-1-txt">Days</span>
+          </div>
+          <div class="cbox-1 clearfix">
+            <span class="cbox-1-digit">14</span>
+            <span class="cbox-1-txt">Hours</span>
+          </div>
+          <div class="cbox-1 clearfix">
+            <span class="cbox-1-digit">48</span>
+            <span class="cbox-1-txt">Min</span>
+          </div>
+          <div class="cbox-1 clearfix">
+            <span class="cbox-1-digit">49</span>
+            <span class="cbox-1-txt">Sec</span>
+          </div>
         </div>
-        <div class="cbox-1 clearfix">
-          <span class="cbox-1-digit">14</span>
-          <span class="cbox-1-txt">Hours</span>
-        </div>
-        <div class="cbox-1 clearfix">
-          <span class="cbox-1-digit">48</span>
-          <span class="cbox-1-txt">Min</span>
-        </div>
-        <div class="cbox-1 clearfix">
-          <span class="cbox-1-digit">49</span>
-          <span class="cbox-1-txt">Sec</span>
-        </div>
+        <h2>Lorem ipsum dolor sit amet.</h2>
       </div>
     </section>
     
@@ -117,83 +124,44 @@
       
     </section>
     
+    <section class="about-feature">
+      <div class="container-auto">
+        <div class="feature-content">
+          <div class="col-1">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis facilis distinctio voluptatem nemo voluptate fugit consequuntur hic alias libero. Saepe laboriosam in impedit architecto.
+          </div>
+          <div class="col-2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis facilis distinctio voluptatem nemo voluptate fugit consequuntur hic alias libero. Saepe laboriosam in impedit architecto.
+          </div>
+          <div class="col-3 purple">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis facilis distinctio voluptatem nemo voluptate fugit consequuntur hic alias libero. Saepe laboriosam in impedit architecto.
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    
     <footer class="clearfix">
-      <img class="logo" src="img/logo.svg" alt="logo">
-      <ul class="footer-nav">
-        <li><a href="#">Ice cream</a></li>
-        <li><a href="#">Donuts</a></li>
-        <li><a href="#">Tea</a></li>
-        <li><a href="#">Coffee</a></li>
-      </ul>
-      <p class="copyright">&copy;2015 The Best City.</p>
+      
+      <a class="btn-go-to-top" href="#">
+        <i class="fa fa-chevron-circle-up fa-3x" aria-hidden="true"></i>
+      </a>
+      <div class="container">
+        <img class="logo" src="img/logo.svg" alt="logo">
+        <ul class="footer-nav">
+          <li><a href="#">Ice cream</a></li>
+          <li><a href="#">Donuts</a></li>
+          <li><a href="#">Tea</a></li>
+          <li><a href="#">Coffee</a></li>
+        </ul>
+        <p class="copyright">&copy;2015 The Best City.</p>
+      </div>
     </footer>
     
     
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js">  </script>  
     <script type="text/javascript" src="https://masonry.desandro.com/masonry.pkgd.js"></script>
-    <script type="text/javascript">
-      
-    
-    $('.search-trigger').on('click', function(e) {
-      e.preventDefault();
-      $('.search-wrap').hasClass('expand') ? $('.search-wrap').removeClass('expand') : $('.search-wrap').addClass('expand');
-      
-      if($('.main-nav__item').hasClass('expand')) {
-        $('.main-nav__item').removeClass('expand');
-        // $('.main-nav__item').delay(500).fadeIn('slow');
-      } else {
-        $('.main-nav__item').addClass('expand');
-        // $('.main-nav__item').fadeOut('fast');
-      }
-      
-      if($('.fa').hasClass('fa-search')) {
-        $('.fa').removeClass('fa-search');
-        $('.fa').addClass('fa-times');
-      } else {
-        $('.fa').addClass('fa-search');
-        $('.fa').removeClass('fa-times');
-      }
-      
-      $('#search').delay(500).toggleClass('open');
-      
-      
-    });
-    
-    $(document).on('click', function(e){
-      if(!$(e.target).closest('.search-wrap').length) {
-        if($('.fa').hasClass('fa-times')) {
-          $('.fa').removeClass('fa-times');
-          $('.fa').addClass('fa-search');
-        } 
-        
-        if($('.main-nav__item').hasClass('expand')) {
-          $('.main-nav__item').removeClass('expand');
-          // $('.main-nav__item').delay(500).fadeIn('slow');
-        } 
-        
-        if($('.search-wrap').hasClass('expand')) {
-          $('.search-wrap').removeClass('expand');
-          // $('.main-nav__item').delay(500).fadeIn('slow');
-        } 
-        
-        $('#search').removeClass('open');
-      }
-    });
-    
-    
-    $('.grid').masonry({
-      itemSelector: '.grid-item',
-      columnWidth: 160,
-      horizontalOrder: true
-    });
-    
-    $('.hamburger-button').on('click', function(e) {
-        e.preventDefault();
-        $('.main-nav').toggleClass('open');
-    });
-    
-    
-    
-        </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
